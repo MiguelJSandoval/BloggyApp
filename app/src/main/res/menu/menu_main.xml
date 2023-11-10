@@ -1,10 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.mjimenez.bloggy.MainActivity">
+    tools:context="com.mjimenez.bloggy.ui.usecases.home.HomeActivity">
+
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/search_hint"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>

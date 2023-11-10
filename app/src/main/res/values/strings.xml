@@ -10,4 +10,10 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="add">Añadir entrada</string>
+    <string name="search_hint">Buscar...</string>
+    <string name="by">"Por: "</string>
+    <string name="publication_date">"Publicado el: "</string>
+
+    <string name="text_validation_success">Validación completa</string>
+    <string name="text_validation_error_empty_field">El campo no puede estar vacío</string>
 </resources>
