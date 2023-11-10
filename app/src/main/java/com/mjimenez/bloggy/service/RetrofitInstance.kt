@@ -1,6 +1,7 @@
 package com.mjimenez.bloggy.service
 
 import com.google.gson.GsonBuilder
+import com.mjimenez.bloggy.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -10,7 +11,7 @@ object RetrofitInstance {
         .create()
     val api: Api by lazy {
         Retrofit.Builder()
-            .baseUrl("http://192.168.1.6:8080/") // For dev environment
+            .baseUrl(BuildConfig.SERVER_URL) // For dev environment
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(Api::class.java)

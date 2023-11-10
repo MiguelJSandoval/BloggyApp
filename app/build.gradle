@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+ext {
+    url = "\"http://192.168.1.6:8080/\""
+}
+
 android {
     compileSdk 32
 
@@ -18,8 +22,13 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "String", "SERVER_URL", url
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "String", "SERVER_URL", url
         }
     }
     compileOptions {
