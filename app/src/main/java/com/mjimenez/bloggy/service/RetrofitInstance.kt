@@ -11,7 +11,7 @@ object RetrofitInstance {
         .create()
     val api: Api by lazy {
         Retrofit.Builder()
-            .baseUrl(BuildConfig.SERVER_URL) // For dev environment
+            .baseUrl(BuildConfig.SERVER_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(Api::class.java)
