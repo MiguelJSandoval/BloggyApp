@@ -49,7 +49,9 @@ class CreatePostActivity : AppCompatActivity() {
 
         binding.save.setOnClickListener { view ->
             if (validate()) {
-                val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+                val tz = TimeZone.getTimeZone("UTC")
+                val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'")
+                dateFormat.timeZone = tz
                 val savingPost = SavingPost(
                     title = binding.title.text.toString(),
                     date = dateFormat.format(Date()),
